@@ -1,5 +1,6 @@
-import { Express } from "express";
-import { createToDoValidationSchema, markCompletedToDoValidationSchema } from "./routes/types";
+import express from "express";
+import { createToDoValidationSchema, markCompletedToDoValidationSchema } from "./routes/types.js";
+import bodyParser from "body-parser"
 const app = express();
 
 app.use(express.json());
