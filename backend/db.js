@@ -4,7 +4,8 @@ mongoose.connect("mongodb+srv://admin:Xmghj%402435@test1cluster0.kv4ylmk.mongodb
 
 const todoScheme = new mongoose.Schema({
     title: String,
-    description: String
+    description: String,
+    completed: Boolean
 });
 
 const Todo = mongoose.model("Todo", todoScheme);
