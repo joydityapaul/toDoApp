@@ -4,13 +4,13 @@ import {
   createToDoValidationSchema,
   markCompletedToDoValidationSchema,
 } from "./routes/types.js";
-import Todo from "./db.js";
+import Todo from "./routes/db.js";
 const app = express();
 
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.post("/create-todo", async (req, res) => {
+app.post("/create-new-todo", async (req, res) => {
   if (!createToDoValidationSchema.safeParse(req.body).success) {
     res.status(400).json({
       success: false,
